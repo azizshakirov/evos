@@ -7,6 +7,7 @@ def admin_menu():
         print("1. Ko'rish.")
         print("2. Qo'shish.")
         print("3. Chiqish.")
+        print("4. Exit.")
         n = int(input(">>> "))
         if n == 1:
             m1.show_products()
