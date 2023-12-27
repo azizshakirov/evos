@@ -17,10 +17,7 @@ class Product:
         return self.price
     
     def __str__(self):
-        return f"""{self.get_name} 
-{self.get_info} 
-{self.get_price}
-"""
+        return f"""{self.get_name} {self.get_info} {self.get_price}"""
     
 
 class Market:
@@ -34,13 +31,16 @@ class Market:
             Product('Hot Dok', "Hamir, Sosiska", 15000),
             Product('Burger', "Hamir, Go'sht", 35000)
         ]
+        self.orders = dict()
 
     def show_products(self):
-       [print(product) for product in self.products]
+        for id, product in enumerate(self.products):
+           print("*"*40)
+           print("* {:<36} *".format(f"{id+1} - {product}"))
+        print("*"*40)
 
-# p1 = 
+    def addProduct(self, new_product):
+        self.products.append(new_product)
 
-# print(p1.get_name)
 
-m1 = Market("EVOS", "Halqobod", "+998977777777")
-m1.show_products()
+
