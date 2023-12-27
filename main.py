@@ -19,6 +19,10 @@ class Product:
     def __str__(self):
         return f"""{self.get_name} {self.get_info} {self.get_price}"""
     
+    @property
+    def get_name_price(self):
+        return f"""{self.get_name} {self.get_price}"""
+    
 
 class Market:
     def __init__(self, name, location, phone_number) -> None:

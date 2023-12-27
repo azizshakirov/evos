@@ -1,4 +1,5 @@
 from main import *
+from core import *
 
 
 def admin_menu():
@@ -33,7 +34,7 @@ def client_menu():
             else :
                 m1.orders[prod] = 1
         elif n == 2:
-            print(m1.orders)
+            Core.saveOrder(m1.orders)
         elif n == 3:
             break
 def menu():
